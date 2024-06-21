@@ -1,0 +1,248 @@
+directories:
+  - name: jellyCTF
+    directories:
+      - name: crypto
+        directories:
+          - name: cherry
+            files:
+              - name: index.md
+                tags: [cipher, crypto, modular equations]
+                keywords: [slot machine, spin, coins, cipher, modulus, modulo]
+          - name: cipher_check
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: cult_classic_1
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: cult_classic_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: dizzy_fishman
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: exclusively_yours
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: really_special_awawawas
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: the_brewing_secrets
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: you're_bababased?
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: you're_based
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+      - name: forensics
+        directories:
+          - name: alien_transmission
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: head_empty
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: head_empty_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: mpreg
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: oshi_mark
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: the_REAL_truth
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: the_REAL_truth_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+      - name: misc
+        directories:
+          - name: is_jelly_stuck
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: just_win_lol
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: this_is_canon
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: watch_streams
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: welcome
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+      - name: osint
+        directories:
+          - name: into_the_atmosphere
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: secret_engineering_roleplay
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: stalknights_1
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: stalknights_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: stalknights_3
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: stalknights_4
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: stalknights_5
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: super_fan
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+      - name: pwn
+        directories:
+          - name: phase_coffee_1
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: phase_coffee_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: phase_coffee_3
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+      - name: rev
+        directories:
+          - name: awassmbely
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: lost_in_translation
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: rev1
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+      - name: web
+        directories:
+          - name: aidoru
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: awafy_me
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: awascii_validator
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: bro_visited_his_site
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: bro_visited_his_site_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: do_not_trust
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: factory_clicker
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: pentest_on_stream
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: vlookup_hot_singles
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+          - name: vlookup_hot_singles_2
+            files:
+              - name: index.md
+                tags: []
+                keywords: []
+
