@@ -19,4 +19,3 @@
 
 This is the first CTF I've participated in, and by extension, this is my first time doing writeups for CTF challenges; I'll do my best and I hope you'll be patient with me :pray:
 
-```
