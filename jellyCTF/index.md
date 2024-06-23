@@ -15,7 +15,7 @@
 >       3. Making use of the hints system for challenges that have them.
 >    - The event will run from 2024-06-10T07:00:00Z to 2024-06-24T07:00:00Z, after which the scoreboard will close and challenge source code and solutions will be released. The site and challenges will stay up until 2024-06-31T23:59:00Z. Feel free to post your own writeups after the event has ended, too.
 >
-> _—via jellyc.tf homepage_
+> _-via jellyc.tf homepage_
 
 This is the first CTF I've participated in, and by extension, this is my first time doing writeups for CTF challenges; I'll do my best and I hope you'll be patient with me :pray:
 
