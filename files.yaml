@@ -5,6 +5,8 @@ directories:
         page: false
         tags: [ctf]
         keywords: [info, welcome, rules]
+      - name: jellyctf-resize.jpg
+        type: image
     directories:
       - name: crypto
         directories:
