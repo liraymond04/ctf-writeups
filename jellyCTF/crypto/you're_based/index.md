@@ -30,7 +30,7 @@ It should be noted that by this point in the event, I had already gone through m
 
 Unfortunately, I think I just wasn't hitting the right search terms, I found articles on base85 and base92, and after a few days of looking at the problem intermittently I was beginning to think I was going mad over such an easy problem.
 
-Stumped, I spent the night watching Jelly's CTF VOD to cool down and gather myself, and when I got to 3:29:21 in VOD I jumped from my chair and rushed to my computer.
+Stumped, I spent the night watching [Jelly's CTF VOD](https://www.youtube.com/watch?v=QH8LKkIVHzI) to cool down and gather myself, and when I got to [3:29:21](https://www.youtube.com/watch?v=QH8LKkIVHzI&t=12561) in VOD I jumped from my chair and rushed to my computer.
 
 ![jelly's search results](image-1.png)
 
@@ -57,6 +57,8 @@ console.log(uint8Array2);
 The first usage example on the repo page has some familiar sights, so I copied that example and modified it to use the flag from earlier,
 
 ```js
+// main.js
+
 import { decode } from 'base65536'
 
 const uint8Array2 = new Uint8Array(decode("驪ꍬ硹答𓉻晨鑳橩ꅟ𓅵鑴鑡楢晳鑣𔕡𔕡𔕡𓁡𓍭𠍰"))
@@ -102,4 +104,4 @@ Final flag: `jellyCTF{th1s_i5_just_a_b4s1c_awawawarmup}`
 
 ### Related
 
-I have some more base65536-related foibles with [oshi_mark](../../forensics/oshi_mark/index.md), although this challenge is labelled as `hard` so maybe it's more understandable.
+I have some more somewhat base65536-related foibles (more general encoding/decoding) with [oshi_mark](../../forensics/oshi_mark/index.md), although this challenge is labelled as `hard` so maybe it's more understandable.
