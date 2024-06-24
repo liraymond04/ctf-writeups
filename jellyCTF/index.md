@@ -19,3 +19,9 @@
 
 This is the first CTF I've participated in, and by extension, this is my first time doing writeups for CTF challenges; I'll do my best and I hope you'll be patient with me :pray:
 
+I had a blast with the CTF and I got a lot further than I expected! All challenges completed, and 18th place with 31885 points; and here I was, expecting to drop out after the first day.
+
+I hope to get writeups for all the challenges done eventually, but for now I'll just focus on getting some of my favourites done first, and I'll be sure to link the finished writeups here:
+
+- crypto
+    - [you're_based](./crypto/you're_based/index.md)

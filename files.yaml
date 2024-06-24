@@ -68,8 +68,18 @@ directories:
             files:
               - name: index.md
                 page: true
-                tags: []
-                keywords: []
+                tags: [base64, base65536]
+                keywords: [encode, encoding, decode, decoding]
+              - name: image.png
+                type: image
+              - name: image-1.png
+                type: image
+              - name: image-2.png
+                type: image
+              - name: image-3.png
+                type: image
+              - name: image-4.png
+                type: image
       - name: forensics
         directories:
           - name: alien_transmission
