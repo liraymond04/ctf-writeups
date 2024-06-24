@@ -110,8 +110,20 @@ directories:
             files:
               - name: index.md
                 page: true
-                tags: []
-                keywords: []
+                tags: [unicode, ascii]
+                keywords: [zero-width non joiner, unicode variation selectors, uint8array, encode, decode]
+              - name: bingo-hans-landa.gif
+                type: image
+              - name: image.png
+                type: image
+              - name: image-1.png
+                type: image
+              - name: image-2.png
+                type: image
+              - name: image-3.png
+                type: image
+              - name: image-4.png
+                type: image
           - name: the_REAL_truth
             files:
               - name: index.md
