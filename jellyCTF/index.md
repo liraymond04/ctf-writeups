@@ -25,3 +25,4 @@ I hope to get writeups for all the challenges done eventually, but for now I'll 
 
 - crypto
     - [you're_based](./crypto/you're_based/index.md)
+    - [oshi_mark](./forensics/oshi_mark/index.md)
