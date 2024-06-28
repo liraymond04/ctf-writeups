@@ -16,6 +16,12 @@ Stage 2: A bigger base is needed... how many bits were in stage 1's base? What's
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 ## First impressions
 
 Off the cuff, the text given appears to be encoded in base64, and surely enough throwing it into a base64 encoder, we get the following:
