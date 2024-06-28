@@ -19,6 +19,12 @@ oh, what's the key? well i pulled it out of my ass. i call it my ass-key.
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 ## First impressions
 
 This challenge appears to be missing something, but it isn't! Copying the characters and pasting them into [CyberChef](https://gchq.github.io/CyberChef/) and outputting to hexadecimal shows a loooot of bytes, which suggests that we're dealing with zero-width characters here.
