@@ -4,9 +4,17 @@ Points: 935
 
 Difficulty: easy
 
+Here's a basic encoding challenge to start with: `VGhhdCB3YXMganVzdCBhIHdhcm0gdXAuIEhlcmUgaXMgdGhlIGFjdHVhbCBmbGFnLCB0aG91Z2ggeW91IG1heSBuZWVkIGEgYmFzZSB0aGF0J3MgJ0EnIGJpdCBsYXJnZXI6CumpquqNrOehueetlPCTibvmmajpkbPmqanqhZ/wk4W16ZG06ZGh5qWi5pmz6ZGj8JSVofCUlaHwlJWh8JOBofCTja3woI2w`
+
 Author: Sheepiro
 
-Description: Here's a basic encoding challenge to start with: `VGhhdCB3YXMganVzdCBhIHdhcm0gdXAuIEhlcmUgaXMgdGhlIGFjdHVhbCBmbGFnLCB0aG91Z2ggeW91IG1heSBuZWVkIGEgYmFzZSB0aGF0J3MgJ0EnIGJpdCBsYXJnZXI6CumpquqNrOehueetlPCTibvmmajpkbPmqanqhZ/wk4W16ZG06ZGh5qWi5pmz6ZGj8JSVofCUlaHwlJWh8JOBofCTja3woI2w`
+<details>
+<summary>View Hint</summary>
+
+Stage 1: A common base decoding  
+Stage 2: A bigger base is needed... how many bits were in stage 1's base? What's A in hexadecimal?
+
+</details>
 
 ## First impressions
 
