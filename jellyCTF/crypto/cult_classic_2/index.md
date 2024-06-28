@@ -37,4 +37,10 @@ Official lyrics from someone's song...
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 ##

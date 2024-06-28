@@ -37,6 +37,12 @@ Vignere (you already have the key)
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [01.zip](./01.zip), [01_welcome.txt](./01_welcome.txt)
 
 ##

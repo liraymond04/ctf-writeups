@@ -23,6 +23,12 @@ https://crypto.stackexchange.com/questions/74891/decrypting-multi-prime-rsa-with
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [vals.txt](./vals.txt)
 
 ##

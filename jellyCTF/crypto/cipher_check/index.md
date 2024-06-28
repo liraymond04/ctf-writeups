@@ -69,6 +69,12 @@ Here is a list of ciphers used for this challenge!
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [cipher_check.zip](./cipher_check.zip)
 
 ##

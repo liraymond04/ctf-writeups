@@ -41,6 +41,12 @@ Is there a different `g` which also has a small number of possible public and se
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [dizzy_fishman.zip](./dizzy_fishman.zip)
 
 ##

@@ -28,6 +28,12 @@ https://samy.pl/opensesame/
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [the_brewing_secrets.zip](./the_brewing_secrets.zip)
 
 ##

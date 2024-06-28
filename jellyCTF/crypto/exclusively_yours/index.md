@@ -17,6 +17,12 @@ XOR cipher + start of the flag is known (`jellyCTF{`) Can you use this to find t
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [encrypted.txt](./encrypted.txt)
 
 ##

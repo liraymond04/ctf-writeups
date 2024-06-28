@@ -29,6 +29,12 @@ https://mathspp.com/blog/base-conversion-in-python#converting-from-any-base-to-a
 
 </details>
 
+<style>
+details summary { 
+    cursor: pointer;
+}
+</style>
+
 Files: [list_of_safe_unicode_chars.txt](./list_of_safe_unicode_chars.txt)
 
 ##
