@@ -90,7 +90,7 @@ def update_file(file):
 def create_file(file):
     try:
         with open(file, "rb") as f:
-            _ = supabase.storage.from_("images").upload(
+            _ = supabase.storage.from_("files").upload(
                 file=f,
                 path=os.path.join(repo_url, file),
                 file_options={
@@ -106,7 +106,7 @@ def create_file(file):
 
 def update_image(file):
     try:
-        supabase.storage.from_("images").remove([os.path.join(repo_url, file)])
+        supabase.storage.from_("files").remove([os.path.join(repo_url, file)])
         logger.info(f"Successfully deleted {file}")
     except Exception as e:
         logger.error(f"Error deleting post for {file}: {e}")
@@ -114,7 +114,6 @@ def update_image(file):
 
 def main():
     try:
-        repo_url = os.getenv("GITHUB_REPOSITORY_URL")
         if not repo_url:
             logger.error("GITHUB_REPOSITORY_URL environment variable not set.")
             sys.exit(1)

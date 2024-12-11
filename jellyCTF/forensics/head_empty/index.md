@@ -34,6 +34,6 @@ details summary {
 }
 </style>
 
-Files: [memory.dmp.gz](./memory.dmp.gz)
+Files: [memory.dmp.gz](https://github.com/liraymond04/ctf-writeups/raw/refs/heads/main/jellyCTF/forensics/head_empty/memory.dmp.gz)
 
 ##

@@ -220,7 +220,7 @@ def main():
         for file in added_files:
             if file.endswith('.md'):
                 logger.info(f"Processing {file}")
-                metadata = read_markdown_metadata(os.path.join("jellyCTF", file))
+                metadata = read_markdown_metadata(file)
                 # print("Markdown files were added.")
                 # print(metadata)
                 create_new_post(file, metadata)
@@ -233,7 +233,7 @@ def main():
         for file in changed_files:
             if file.endswith('.md'):
                 logger.info(f"Processing {file}")
-                metadata = read_markdown_metadata(os.path.join("jellyCTF", file))
+                metadata = read_markdown_metadata(file)
                 # print("Markdown files were modified.")
                 # print(metadata)
                 check_if_differences_exist(file, metadata)
@@ -246,7 +246,7 @@ def main():
         for file in deleted_files:
             if file.endswith('.md'):
                 logger.info(f"Processing {file}")
-                metadata = read_markdown_metadata(os.path.join("jellyCTF", file), deleted=True)
+                metadata = read_markdown_metadata(file, deleted=True)
                 # print("Markdown files were deleted.")
                 # print(metadata)
                 delete_post(file, metadata)
