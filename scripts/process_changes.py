@@ -17,7 +17,7 @@ SUPABASE_URL: str = os.getenv("SUPABASE_URL") or ""
 
 supabase: Client = create_client(SUPABASE_URL, API_KEY)
 
-repo_url = os.getenv("GITHUB_REPOSITORY_URL")
+repo_url: str = os.getenv("GITHUB_REPOSITORY_URL") or ""
 
 def extract_yaml_frontmatter(text):
     match = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
@@ -107,6 +107,7 @@ def create_new_post(file, metadata):
             "content": metadata["content"],
             "repo_url": metadata["repo_url"],
             "file_path": metadata["file_path"],
+            "media_files": metadata["media_files"],
             "updated_at": str(datetime.datetime.now())
         }
 
@@ -182,13 +183,14 @@ def read_markdown_metadata(file_path, deleted=False):
         with open(file_path, 'r') as f:
             content = f.read()
 
-        filename_without_extension = os.path.splitext(os.path.basename(file_path))[0]
+        filename_without_extension = os.path.splitext(file_path)[0]
+        parent_directory = os.path.basename(os.path.dirname(filename_without_extension))
 
         directory = os.path.dirname(file_path)
         files_in_directory = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f)) and f != os.path.basename(file_path)]
 
         post_data = {
-            "title": filename_without_extension,
+            "title": parent_directory,
             "content": content,
             "repo_url": repo_url,
             "file_path": file_path,
@@ -218,7 +220,7 @@ def main():
         for file in added_files:
             if file.endswith('.md'):
                 logger.info(f"Processing {file}")
-                metadata = read_markdown_metadata(file)
+                metadata = read_markdown_metadata(os.path.join("jellyCTF", file))
                 # print("Markdown files were added.")
                 # print(metadata)
                 create_new_post(file, metadata)
@@ -231,7 +233,7 @@ def main():
         for file in changed_files:
             if file.endswith('.md'):
                 logger.info(f"Processing {file}")
-                metadata = read_markdown_metadata(file)
+                metadata = read_markdown_metadata(os.path.join("jellyCTF", file))
                 # print("Markdown files were modified.")
                 # print(metadata)
                 check_if_differences_exist(file, metadata)
@@ -244,7 +246,7 @@ def main():
         for file in deleted_files:
             if file.endswith('.md'):
                 logger.info(f"Processing {file}")
-                metadata = read_markdown_metadata(file, deleted=True)
+                metadata = read_markdown_metadata(os.path.join("jellyCTF", file), deleted=True)
                 # print("Markdown files were deleted.")
                 # print(metadata)
                 delete_post(file, metadata)
