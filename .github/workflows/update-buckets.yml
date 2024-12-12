@@ -3,8 +3,14 @@ name: Process Media files
 on:
   push:
     paths:
-      - 'jellyCTF/**'
-      - '!jellyCTF/**/*.md'
+      - '**'
+      - '**/*.md'
+      - '!.git/**'
+      - '!.github/**'
+      - '!.gitattributes'
+      - '!.gitignore'
+      - '!scripts/**'
+      - '!files.yaml'
 
 jobs:
   update-db:
@@ -32,8 +38,14 @@ jobs:
           recover_deleted_files_to_destination: 'actions/recovered'
           separator: ","
           files: |
-            jellyCTF/**
-            !jellyCTF/**.md
+            **
+            **/*.md
+            !.git/**
+            !.github/**
+            !.gitattributes
+            !.gitignore
+            !scripts/**
+            !files.yaml
 
       - name: List all changed media files
         if: steps.changed-media-files.outputs.any_changed == 'true'

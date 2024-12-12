@@ -3,7 +3,7 @@ name: Process Markdown
 on:
   push:
     paths:
-      - 'jellyCTF/**/*.md'
+      - '**/*.md'
 
 jobs:
   update-db:

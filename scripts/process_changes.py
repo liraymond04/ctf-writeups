@@ -14,10 +14,9 @@ from supabase import create_client, Client
 
 API_KEY: str = os.getenv("SUPABASE_SERVICE_KEY") or ""
 SUPABASE_URL: str = os.getenv("SUPABASE_URL") or ""
+repo_url: str = os.getenv("GITHUB_REPOSITORY_URL") or ""
 
 supabase: Client = create_client(SUPABASE_URL, API_KEY)
-
-repo_url: str = os.getenv("GITHUB_REPOSITORY_URL") or ""
 
 def extract_yaml_frontmatter(text):
     match = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
@@ -32,8 +31,6 @@ def remove_yaml_frontmatter(text):
     content_without_frontmatter = re.sub(pattern, "", text, flags=re.DOTALL)
     return content_without_frontmatter
 
-excluded_files = ["LICENSE.md", "README.md"]
-
 def get_added_files_from_env():
     try:
         added_files_env = os.getenv("ADDED_MARKDOWN_FILES")
@@ -43,7 +40,7 @@ def get_added_files_from_env():
 
         added_files = [
             file.strip() for file in added_files_env.split(",")
-            if file.strip() and file.strip() not in excluded_files
+            if file.strip()
         ]
         return added_files
     except Exception as e:
@@ -59,7 +56,7 @@ def get_deleted_files_from_env():
 
         deleted_files = [
             file.strip() for file in deleted_files_env.split(",")
-            if file.strip() and file.strip() not in excluded_files
+            if file.strip()
         ] 
         return deleted_files
     except Exception as e:
@@ -75,7 +72,7 @@ def get_changed_files_from_env():
 
         changed_files = [
             file.strip() for file in changed_files_env.split(",")
-            if file.strip() and file.strip() not in excluded_files
+            if file.strip()
         ]
         return changed_files
     except Exception as e:
@@ -175,19 +172,56 @@ def check_if_differences_exist(file, metadata):
         logger.error(f"Error checking differences for {file}: {e}")
         sys.exit(1)
 
+with open("files.yaml", "r") as f:
+    files_yaml = yaml.safe_load(f.read())
+
+def is_in_obj(directories, field):
+    for entry in directories:
+        if entry["name"] == field:
+            return entry
+    return None
+
 def read_markdown_metadata(file_path, deleted=False):
     try:
         if deleted:
             file_path = os.path.join("actions/recovered", file_path)
 
+
+        print(os.path.abspath("README.md"))
         with open(file_path, 'r') as f:
             content = f.read()
+
+        # repo root
+        if file_path == "README.md":
+            post_data = {
+                "title": "ctf-writeups",
+                "content": content,
+                "repo_url": repo_url,
+                "file_path": file_path,
+                "updated_at": str(datetime.datetime.now()),
+                "media_files": []
+            }
+            return post_data
 
         filename_without_extension = os.path.splitext(file_path)[0]
         parent_directory = os.path.basename(os.path.dirname(filename_without_extension))
 
         directory = os.path.dirname(file_path)
         files_in_directory = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f)) and f != os.path.basename(file_path)]
+        files_in_directory = [os.path.join(directory, f) for f in files_in_directory]
+
+        cur_yaml = files_yaml
+        found = False
+        for cur_dir in file_path.split(os.path.sep):
+            if "directories" in cur_yaml:
+                is_in = is_in_obj(cur_yaml["directories"], cur_dir)
+                if is_in:
+                    cur_yaml = is_in
+            elif "files" in cur_yaml:
+                is_in = is_in_obj(cur_yaml["files"], cur_dir)
+                if is_in:
+                    cur_yaml = is_in
+                    found = True
 
         post_data = {
             "title": parent_directory,
@@ -197,6 +231,14 @@ def read_markdown_metadata(file_path, deleted=False):
             "updated_at": str(datetime.datetime.now()),
             "media_files": files_in_directory
         }
+
+        if found:
+            if "tags" in cur_yaml:
+                if len(cur_yaml["tags"]) != 0:
+                    post_data["tags"] = cur_yaml["tags"]
+            if "keywords" in cur_yaml:
+                if len(cur_yaml["keywords"]) != 0:
+                    post_data["keywords"] = cur_yaml["keywords"]
 
         return post_data
     except FileNotFoundError:
